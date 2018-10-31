@@ -250,7 +250,7 @@ body {
   text-align: center;
 }
 
-.project-tile:hover .overlay {
+.project-tile:hover .overlay, .project-tile:active .overlay {
   bottom: 0;
   height: 100%;
   opacity: 1;
