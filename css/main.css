@@ -8,11 +8,63 @@ body {
   color: #333;
   font-family: 'Raleway', sans-serif;
   overflow-x: hidden;
+
 }
 
 /* NAVIGATION BAR SECTION */
 
 #navbar {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  font-size: 18px;
+  padding-bottom: 20px;
+  background-color: RGB(28,	30,	39);
+}
+
+.nav-list {
+  list-style-type: none;
+  display: none;
+}
+
+.nav-item,
+.logo {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-list li {
+  text-align: center;
+  margin: 15px auto;
+}
+
+
+.logo {
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 24px;
+}
+
+.active {
+  display: block;
+}
+
+.clicked {
+  display: none;
+}
+
+
+/* #navbar {
   background-color: RGB(28,	30,	39);
   position: fixed;
   width: 100%;
@@ -39,7 +91,7 @@ body {
 #navbar a:hover {
   color: RGB(252,	97,	156);
   transition-duration: 0.4s;
-}
+} */
 
 /* INTRODUCTION SECTION */
 
@@ -54,7 +106,7 @@ body {
 
 #welcome-section > h1 {
   margin: 0;
-  padding: 230px 0 20px;
+  padding: 130px 0 20px;
   font-size: 28px;
   font-weight: 400;
 }
@@ -68,16 +120,20 @@ body {
   padding-bottom: 110px;
 }
 
-#welcome-section button {
+#welcome-section button a {
+  color: #fff;
+  padding: 9% 5%;
+  text-decoration: none;
+  display: inline-block;
   width: 230px;
   height: 70px;
   border: 2px solid #fff;
-  background-color: transparent;
+  background-color: RGB(28,	30,	39);
   font-size: 21px;
   transition: 0s background-color;
 }
 
-#welcome-section button:hover {
+#welcome-section button a:hover {
   background-color:  RGB(49,	190, 197);
   transition-duration: 0.4s;
   border: none;
@@ -87,7 +143,7 @@ body {
 
 #about, #projects {
   min-height: 100vh;
-  padding-top: 10px;
+  padding-top: 6em;
 }
 
 #about-details {
@@ -188,7 +244,7 @@ body {
 
 #projects {
   background-color: RGB(242,	242,	235);
-  padding-bottom: 50px;
+  padding-top: 3em;
 }
 
 #projects h4 {
@@ -209,10 +265,12 @@ body {
   margin-bottom: 0;
   width: 390px;
   height: 300px;
-  /* background-image: url('../images/memorygame.png'); */
   background-size: cover;
   background-position: center;
   opacity: 1;
+  margin: 20px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, .3);
 }
 
 #memory-game {
@@ -396,7 +454,7 @@ footer p {
   margin: 0;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 768px) {
 
   #navbar ul{
     text-align: right;
@@ -406,6 +464,37 @@ footer p {
     padding: 20px;
     font-size: 18px;
   }
+
+  /* .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    align-items: center;
+  } */
+
+  .nav-list {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .nav-list li {
+    margin: 0;
+  }
+
+  .nav-item {
+    margin-left: 40px;
+  }
+
+  .logo {
+   margin-top: 0;
+ }
+
+ .navbar-toggle {
+   display: none;
+ }
 
   #welcome-section > h1 {
     margin: 0;
@@ -417,6 +506,11 @@ footer p {
   #welcome-section p {
     font-size: 20px;
     padding-bottom: 30px;
+  }
+
+  #about {
+    /* margin-top: -30px; */
+    height: 100vh;
   }
 
   #about-details {
@@ -439,7 +533,6 @@ footer p {
 
   #about h3, #projects h3 {
     font-size: 40px;
-    margin-top: 30px;
   }
 
   #skills-section {
@@ -451,6 +544,12 @@ footer p {
     height: 30px;
     width: 80%;
   }
+
+  #projects {
+    margin-top: -180px;
+    padding-top: 30px;
+  }
+
 
   #contact {
     height: 85vh;

@@ -7,20 +7,33 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
-  <body>
+  <body >
     <nav id="navbar">
-       <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-       </ul>
+      <span class="navbar-toggle" id="menu-toggle">
+        <i class="fa fa-bars"></i>
+      </span>
+      <a href="#" class="logo">logo</a>
+      <ul class="nav-list" id="ul-menu">
+        <li>
+          <a href="#home" class="nav-item">Home</a>
+        </li>
+        <li>
+          <a href="#about" class="nav-item">About</a>
+        </li>
+        <li>
+          <a href="#projects" class="nav-item">Portfolio</a>
+        </li>
+        <li>
+          <a href="#contact" class="nav-item">Contact</a>
+        </li>
+      </ul>
     </nav>
     <div id="welcome-section">
-      <h1>Hello, I'm <span>Ewa Czech</span></h1>
-      <p>I am a Front-End Web Developer.</p>
-      <button>View my projects &rarr; </button>
+      <h1 id="welcome-section-h1">Hello, I'm <span>Ewa Czech</span></h1>
+      <p id="home">I am a Front-End Web Developer.</p>
+      <button> <a href="#projects"> View my projects &rarr; </a></button>
     </div>
     <div id="about">
       <h3>About</h3>
@@ -139,5 +152,6 @@
        <p>&copy2018 Ewa Czech</p>
     </footer>
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
