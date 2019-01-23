@@ -14,10 +14,10 @@
       <span class="navbar-toggle" id="menu-toggle">
         <i class="fa fa-bars"></i>
       </span>
-      <a href="#" class="logo">logo</a>
+      <a href="#" class="logo">LOGO</a>
       <ul class="nav-list" id="ul-menu">
         <li>
-          <a href="#home" class="nav-item">Home</a>
+          <a href="#welcome-section" class="nav-item">Home</a>
         </li>
         <li>
           <a href="#about" class="nav-item">About</a>
@@ -32,7 +32,7 @@
     </nav>
     <div id="welcome-section">
       <h1 id="welcome-section-h1">Hello, I'm <span>Ewa Czech</span></h1>
-      <p id="home">I am a Front-End Web Developer.</p>
+      <p>I am a Front-End Web Developer who builds custom websites, tailored to your goals and needs.</p>
       <button> <a href="#projects"> View my projects &rarr; </a></button>
     </div>
     <div id="about">
@@ -40,8 +40,11 @@
       <div id="about-details">
         <div id="photo-section">
           <img src="images/logo.jpeg" alt="">
-          <p>Front-End Web Developer Nanodegree (Udacity/Grow With Google) graduate with several years of experience in customer service and sales support.
-          I am currently working and living in Warsaw, Poland. For any work-related request, please feel free to contact me via phone, email or LinkedIn account.</p>
+          <div id="p-about">
+            <p>Front-End Web Developer Nanodegree (Udacity/Grow With Google) graduate with several years of experience in customer service and sales support.</p>
+            <p>I am currently working and living in Warsaw, Poland.</p>
+            <p>For any work-related request, please feel free to contact me via phone, email or LinkedIn account.</p>
+          </div>
         </div>
         <div id="skills-section">
           <div class="skill-bar">
@@ -85,7 +88,7 @@
     </div>
     <div id="projects">
       <h3>Projects</h3>
-      <h4>Here you can find some of my projects:</h2>
+      <!-- <h4>Here you can find some of my projects:</h2> -->
       <div id="projects-info">
         <div class="project-tile" id="memory-game">
           <div class="overlay">
@@ -122,7 +125,7 @@
             <button><a href="https://github.com/eaczechova/Neighborhood-Map-React" target='_blank'>Learn More</a></button>
           </div>
         </div>
-        <div class="project-tile">
+        <div class="project-tile" id="future-projects">
           <div class="overlay">
             <h5>And more to come...</h5>
             <p>Web Development Projects</p>
@@ -131,8 +134,8 @@
         </div>
       </div>
     </div>
-    <div id="contact">
-      <h5>Get in touch:</h5>
+    <div id="contact"></br>
+      <h3>Get in touch</h3>
       <form id="contact-form" method="post" action="contact_form_handler.php">
         <input placeholder="Name" type="text" name="name" required>
         <input placeholder="Email address" type="email" name="email" required>

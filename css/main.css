@@ -9,6 +9,7 @@ body {
   color: #333;
   font-family: 'Raleway', sans-serif;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 /* NAVIGATION BAR SECTION */
@@ -115,8 +116,10 @@ body {
 }
 
 #welcome-section p {
-  font-size: 20px;
+  font-size: 17px;
   padding-bottom: 110px;
+  width: 80%;
+  margin: 0 auto;
 }
 
 #welcome-section button a {
@@ -142,6 +145,10 @@ body {
 
 #about, #projects {
   min-height: 100vh;
+  padding-top: 2em;
+}
+
+#about{
   padding-top: 6em;
 }
 
@@ -151,21 +158,28 @@ body {
 
 #photo-section {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 #about-details img {
   display: block;
   width: 150px;
   height: 150px;
-  margin: 0 auto 40px;
+  margin: 0px auto 40px;
   text-align: center;
+}
+
+#p-about {
+  margin-left: 0;
+  width: 100%;
 }
 
 #about-details p {
   display: block;
   margin-top: 0;
-  padding: 20px;
+  padding: 10px 25px;
+  font-size: 16px;
+  text-align: justify;
 }
 
 #about h3:hover, #projects h3:hover {
@@ -236,7 +250,7 @@ body {
   font-size: 25px;
   text-align: center;
   margin-top: 10px;
-  padding-top: 40px;
+  /* padding-top: 40px; */
   padding-bottom: 40px;
   text-transform: uppercase;
 }
@@ -246,7 +260,7 @@ body {
 }
 
 #projects h3 {
-  padding-top: 3em;
+  padding-top: 1.8em;
 }
 
 #projects h4 {
@@ -296,8 +310,12 @@ body {
   background-image: url('../images/hoodmap.png');
 }
 
+#future-projects {
+  background-image: url('../images/qmark.svg');
+}
+
 .overlay {
-  background-color:  RGB(242,	242,	235);
+  background-color: RGB(242,	242,	235);
   opacity: 0;
   transition: transform 0.1s ease-in-out;
   position: absolute;
@@ -358,13 +376,13 @@ body {
 /*CONTACT SECTION */
 
 #contact {
-  height: 100vh;
+  height: 120vh;
   background-color: RGB(32, 34, 44);
 }
 
-#contact h5 {
+#contact h3 {
   padding: 50px 30px 35px;
-  font-size: 18px;
+  font-size: 40px;
   font-weight: 400;
   color: RGBA(47,	166, 197, 0.5);
   text-align: center;
@@ -487,6 +505,10 @@ footer p {
     margin: 0;
   }
 
+  .nav-list a:hover {
+    color: RGB(252,	97,	156);
+  }
+
   .nav-item {
     margin-left: 40px;
   }
@@ -499,6 +521,12 @@ footer p {
    display: none;
  }
 
+  #welcome-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
   #welcome-section > h1 {
     margin: 0;
     padding: 230px 0 20px;
@@ -507,12 +535,14 @@ footer p {
   }
 
   #welcome-section p {
+    width: 50%;
+    margin: 0 auto;
     font-size: 20px;
     padding-bottom: 30px;
   }
 
   #about {
-    height: 100vh;
+    min-height: 100vh;
   }
 
   #about-details {
@@ -523,13 +553,18 @@ footer p {
   #photo-section {
     width: 50%;
     display: flex;
+    margin-left: 30px;
+  }
+
+  #p-about {
+    margin-left: 20px;
   }
 
   #about-details p {
-    width: 300px;
+    width: 480px;
     display: inline-block;
     margin-top: 0;
-    height: 150px;
+    height: 70px;
     padding: 20px;
   }
 
@@ -557,8 +592,17 @@ footer p {
     height: 85vh;
   }
 
+  #contact h3 {
+    padding-top: 2.5em;
+    padding-bottom: 10px;
+  }
+
   #contact-form {
     width: 490px;
+  }
+
+  #contact-data {
+    margin-top: 0px;
   }
 
   #contact-data li {

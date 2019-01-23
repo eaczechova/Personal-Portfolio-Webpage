@@ -32,9 +32,22 @@ for (let i = 0; i < navItem.length; i++) {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-
         document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+            behavior: 'smooth',
+            block: 'start'
         });
     });
 });
+
+// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+//     anchor.addEventListener('click', function (e) {
+//         e.preventDefault();
+//         this.getAttribute('href') === '#home' || this.getAttribute('href') === '#contact'  ?
+//          document.querySelector(this.getAttribute('href')).scrollIntoView({
+//              behavior: 'smooth',
+//              block: 'end'
+//          });
+//      });) :
+//          document.querySelector(this.getAttribute('href')).scrollIntoView({block: 'start'});
+//     });
+// });
