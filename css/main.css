@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,7 +9,6 @@ body {
   color: #333;
   font-family: 'Raleway', sans-serif;
   overflow-x: hidden;
-
 }
 
 /* NAVIGATION BAR SECTION */
@@ -37,7 +37,6 @@ body {
   text-align: center;
   margin: 15px auto;
 }
-
 
 .logo {
   display: inline-block;
@@ -244,6 +243,9 @@ body {
 
 #projects {
   background-color: RGB(242,	242,	235);
+}
+
+#projects h3 {
   padding-top: 3em;
 }
 
@@ -452,6 +454,7 @@ footer p {
   font-weight: 100;
   color: #404459;
   margin: 0;
+  vertical-align: middle;
 }
 
 @media screen and (min-width: 768px) {
@@ -509,7 +512,6 @@ footer p {
   }
 
   #about {
-    /* margin-top: -30px; */
     height: 100vh;
   }
 
