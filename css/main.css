@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,7 +8,6 @@ body {
   color: #333;
   font-family: 'Raleway', sans-serif;
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
 /* NAVIGATION BAR SECTION */
@@ -57,41 +55,27 @@ body {
 
 .active {
   display: block;
+  height: 100vh;
+}
+
+.active li{
+  padding-bottom: 25px;
+  padding-top: 10px;
+  border-bottom: 0.5px solid #2b2e3b;
+}
+
+.active li:first-child {
+  border-top: 0.5px solid #2b2e3b;
+  padding-top: 25px;
+}
+
+.active a:hover {
+color: RGB(252,	97,	156);;
 }
 
 .clicked {
   display: none;
 }
-
-
-/* #navbar {
-  background-color: RGB(28,	30,	39);
-  position: fixed;
-  width: 100%;
-  z-index: 2;
-}
-
-#navbar ul {
-  text-align: center;
-}
-
-#navbar li {
-  display: inline-block;
-  padding: 15px 10px;
-  font-size: 14px;
-}
-
-#navbar a {
-  text-decoration: none;
-  color: #fff;
-  text-transform: uppercase;
-  transition: 0s color;
-}
-
-#navbar a:hover {
-  color: RGB(252,	97,	156);
-  transition-duration: 0.4s;
-} */
 
 /* INTRODUCTION SECTION */
 
@@ -122,20 +106,20 @@ body {
   margin: 0 auto;
 }
 
-#welcome-section button a {
+#welcome-section button {
   color: #fff;
-  padding: 9% 5%;
+  padding: 5%;
   text-decoration: none;
   display: inline-block;
   width: 230px;
-  height: 70px;
+  height: 75px;
   border: 2px solid #fff;
   background-color: RGB(28,	30,	39);
   font-size: 21px;
   transition: 0s background-color;
 }
 
-#welcome-section button a:hover {
+#welcome-section button:hover {
   background-color:  RGB(49,	190, 197);
   transition-duration: 0.4s;
   border: none;
@@ -246,21 +230,30 @@ body {
   height: 30px;
 }
 
-#about h3, #projects h3 {
+#about h3 {
   font-size: 25px;
   text-align: center;
   margin-top: 10px;
-  /* padding-top: 40px; */
+  padding-top: 0.5em;
   padding-bottom: 40px;
   text-transform: uppercase;
 }
 
-#projects {
+/* PROJECT SECTION */
+
+ #projects {
+  min-height: 100vh;
+  padding-top: 2em;
   background-color: RGB(242,	242,	235);
 }
 
-#projects h3 {
-  padding-top: 1.8em;
+ #projects h3 {
+  font-size: 25px;
+  text-align: center;
+  margin-top: 10px;
+  padding-top: 2em;
+  padding-bottom: 40px;
+  text-transform: uppercase;
 }
 
 #projects h4 {
@@ -486,14 +479,6 @@ footer p {
     font-size: 18px;
   }
 
-  /* .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 0;
-    height: 70px;
-    align-items: center;
-  } */
-
   .nav-list {
     display: flex;
     margin-right: 30px;
@@ -515,7 +500,7 @@ footer p {
 
   .logo {
    margin-top: 0;
- }
+  }
 
  .navbar-toggle {
    display: none;
@@ -525,7 +510,7 @@ footer p {
     display: flex;
     align-items: center;
     flex-direction: column;
-}
+  }
 
   #welcome-section > h1 {
     margin: 0;
@@ -542,7 +527,11 @@ footer p {
   }
 
   #about {
-    min-height: 100vh;
+    padding-bottom: 340px;
+  }
+
+  #p-about{
+    padding: 0px;
   }
 
   #about-details {
@@ -558,14 +547,14 @@ footer p {
 
   #p-about {
     margin-left: 20px;
+    padding-bottom: 0;
   }
 
   #about-details p {
     width: 480px;
     display: inline-block;
     margin-top: 0;
-    height: 70px;
-    padding: 20px;
+    padding: 10px;
   }
 
   #about h3, #projects h3 {
@@ -586,7 +575,6 @@ footer p {
     margin-top: -180px;
     padding-top: 30px;
   }
-
 
   #contact {
     height: 85vh;
@@ -614,6 +602,24 @@ footer p {
 
   footer {
     height: 15vh;
+  }
+
+  /* WELCOME SECTION 'TYPE' ANIMATION */
+  #welcome-section > h1 {
+    animation: type 4s steps(20), blink 0.5s infinite;
+    overflow: hidden;
+    white-space: nowrap;
+    /* font-family: monospace; */
+  }
+
+  @keyframes type {
+    0% {
+      width: 0;
+    }
+
+    100% {
+      width: 25ch;
+    }
   }
 
 }
